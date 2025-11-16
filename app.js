@@ -26,7 +26,7 @@ app.post("/api/userData", async (req, res) => {
     const user = new UserData({ name, contact, age });
     await user.save();
 
-    res.json({ success: true, message: "User Data saved successfully", data: user });
+    res.json({ success: true, message: "Submission completed successfully.", data: user });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
